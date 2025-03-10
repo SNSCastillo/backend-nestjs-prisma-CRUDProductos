@@ -2,7 +2,7 @@ import { BadRequestException, Injectable, NotFoundException, ConflictException, 
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { Prisma } from '@prisma/client';
+import { Prisma, Product } from '@prisma/client';
 
 @Injectable()
 export class ProductsService {
@@ -33,10 +33,9 @@ export class ProductsService {
   }
 
   async findOne(id: number) {
-    // Await asegura de terminar la consulta
     const productFound = await this.prismaService.product.findUnique({
       where: {
-        id: id
+        id
       }
     });
 
@@ -64,5 +63,6 @@ export class ProductsService {
     if (deleteProduct){
       throw new BadRequestException(`Product with id ${id} not found`)
     }
+    return
   }
 }
