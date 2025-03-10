@@ -1,0 +1,15 @@
+EL proyecto se creó con npx: npx @nestjs/cli@latest new backend
+Se creó un recurso de products: npx nest g res products
+
+Se instaló el módulo de prisma: npm i prisma -D // Solo para desarrollo
+
+-> // para inicalizarlo
+npx prisma init --datasource-provider sqlite
+
+Después de crear el modelo de porducts crearemos las tablas
+
+-> Convierte la esquema de prisma en una tabla de Db
+npx prisma migrate dev --name init // SI se hace otras migraciones cuando se cambain o agregan nuevos modelos, se debe de cambiar el nombre "init"
+
+-> Para la documentación se utilizó Swagger
+npm install --save @nestjs/swagger
