@@ -9,7 +9,7 @@ npx prisma init --datasource-provider sqlite
 Después de crear el modelo de porducts crearemos las tablas
 
 -> Convierte la esquema de prisma en una tabla de Db
-npx prisma migrate dev --name init // SI se hace otras migraciones cuando se cambain o agregan nuevos modelos, se debe de cambiar el nombre "init"
+npx prisma migrate dev --name init // SI se hace otras migraciones cuando se cambain o agregan nuevos modelos, se debe de cambiar el nombre
 
 -> Para la documentación se utilizó Swagger
 npm install --save @nestjs/swagger
