@@ -10,7 +10,6 @@ export class ProductsService {
     private prismaService: PrismaService
   ){}
 
-
   async create(createProductDto: CreateProductDto) {
     try {
       return await this.prismaService.product.create({
