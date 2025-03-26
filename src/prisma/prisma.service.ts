@@ -1,5 +1,4 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
-// Para traer la conexión
 import {PrismaClient} from '@prisma/client'
 
 @Injectable()
